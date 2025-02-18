@@ -6,9 +6,11 @@ public class Main {
             System.out.println(Thread.currentThread().getName());
         }
 
-        World2 world2 = new World2();
-        Thread t1 = new Thread(world2);
-        t1.start();
+        World2 world2 = new World2(); //New state
+        Thread t1 = new Thread(world2); //Runnable state
+        t1.start(); //Running state
+        //Blocked Waiting state
+        //Terminated state
     }
 }
 
