@@ -4,8 +4,9 @@ public class ThreadPriorityName extends Thread {
         int c = 0;
         for (int i = 0; i < 5; i++) {
             c++;
-            System.out.println("Name: " + Thread.currentThread().getName() + ", Count: " + c);
         }
+        System.out.println("Name: " + Thread.currentThread().getName() + ", Count: " + c);
+
     }
 
     public static void main(String[] args) {
