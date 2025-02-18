@@ -17,7 +17,7 @@ public class ThreadLifeCycle extends Thread {
         System.out.println(t1.getState()); //Runnable
         Thread.sleep(100);
         System.out.println(t1.getState()); //Timed Waiting as it is in sleep
-        t1.join();
+        t1.join(); //this means method is waiting for thread to finish
         System.out.println(t1.getState()); //Terminated
     }
 }
