@@ -32,7 +32,9 @@ public class BankAcc {
                     System.out.println(Thread.currentThread().getName() + " Proceeding with withdrawals ");
                     try {
                         Thread.sleep(1500);
-                    } catch (InterruptedException e) {}
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                    }
                     finally {
                         lock.unlock();
                     }
@@ -46,6 +48,7 @@ public class BankAcc {
                 System.out.println(Thread.currentThread().getName() +" Could not acquire the lock, try later ");
             }
         } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
         }
     }
 }
